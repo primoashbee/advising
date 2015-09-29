@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Example of Bootstrap 3 Dynamic Tabs</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<style type="text/css">
+	table-body {
+    position: absolute;
+}
+</style>
+</head>
+<body>
+<div id="page-content-wrapper">
+<!---Panel Start-->
+<div class="container">
+<div class="panel panel-success">
+<!---Panel Head-->
+<div class="panel-heading panel-success"><h3><center>SUBJECTS</center></h3>  </div>
+<!---Panel Body-->
+<div class="panel-body">
+<!---Tab controls-->		 
+  <ul class="nav nav-tabs" id="myTab">
+        <li class="active"><a href="#sectionA">Section A</a></li>
+        <li><a href="#sectionB">Section B</a></li>
+
+    </ul>
+	<!---Section A-->
+        <div id="sectionA" class="tab-pane fade in active">
+				<div class="inner">
+						<p></p>
+					<!---section content goes here-->
+				</div>
+          </div>
+		   <!--/Section A-->
+		  <!---Section B-->
+        <div id="sectionB" class="tab-pane fade">
+		<div class="inner">
+		<p></p>
+		 <!---section content goes here-->
+		</div>
+		</div>
+		<!---/Section B-->
+</div>
+  <!--/Panel Body-->					  
+</div>
+<!---Whole Panel End-->
+</div>
+  <!---WRAPPER END-->
+  </div>
+ <script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>    
+<script type="text/javascript">
+$(document).ready(function(){ 
+    $("#myTab a").click(function(e){
+    	e.preventDefault();
+    	$(this).tab('show');
+    });
+	for(i=0;i<=10;i++){
+	$('p').append('hahaha \n');
+	}
+});
+</script>
+</body>
+</html>                                		
